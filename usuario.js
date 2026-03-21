@@ -24,12 +24,16 @@ class Usuario{
         const estadoCuenta = this.activo ? "activa" : "inactiva";
         return `El nombre del usuario es : ${this.nombre} tiene como rol ${this.rol}, su email es : ${this.email} y su cuenta está ${estadoCuenta}`
     }
+    beneficios(){
+        
+        return "Beneficios Clientes VIP : \n Ahorro y Promociones Exclusivas \n Atención Personalizada \n Experiencias y Regalos."
+    }    
 
 }
 
 class UsuarioVIP extends Usuario {
-    constructor(nombre, email, membresia, rol = "Cliente VIP"){
-        super(nombre, email, rol);
+    constructor(nombre, email, membresia){
+        super(nombre, email, "Cliente VIP");
         this.membresia = membresia;
     }
 
